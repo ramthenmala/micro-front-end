@@ -3,21 +3,18 @@ import ReactDOM from "react-dom";
 
 import "./index.scss";
 
-const Header = React.lazy(() => import("PageComponents/Header"));
-// const AppFooter = React.lazy(() => import("PageComponents/Footer"));
-
-// import AppHeader from "PageComponents/Header";
+import AppHeader from "PageComponents/Header";
 import AppFooter from "PageComponents/Footer";
+
+import SafeComponent from "./SafeComponent";
 
 const App = () => {
   const [showHeader, setShowHeader] = useState<boolean>(false)
   return (
     <>
-      {
-        showHeader && <Suspense fallback={<div>Loading</div>}>
-        <Header />
-      </Suspense>
-      }
+      <SafeComponent>
+        <AppHeader />
+      </SafeComponent>
       <button onClick={() => setShowHeader(!showHeader)}>Show header</button>
       <div>Front End</div>
       <AppFooter />

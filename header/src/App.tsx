@@ -7,7 +7,7 @@ import "./index.scss";
 
 const App = () => (
   <>
-    <AppHeader/>
+    <AppHeader app={{name : 'Ecom App'}}/>
       <div>Container</div>
     <AppFooter/>
   </>
