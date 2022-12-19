@@ -3,12 +3,14 @@ import ReactDOM from "react-dom";
 
 import "./index.scss";
 
+import AppFooter from "PageComponents/Footer";
+import AppHeader from "PageComponents/Header";
+
 const App = () => (
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <div>Name: host</div>
-    <div>Framework: react</div>
-    <div>Language: TypeScript</div>
-    <div>CSS: Tailwind</div>
-  </div>
+  <>
+    <AppHeader/>
+      <div>Front End</div>
+    <AppFooter/>
+  </>
 );
 ReactDOM.render(<App />, document.getElementById("app"));
